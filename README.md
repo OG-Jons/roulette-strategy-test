@@ -1,4 +1,4 @@
-## Our strategy tester
+## Our roulette strategy tester
 You bet on a color, everytime you lost you double your betting (so if you lose with 1 you go 2 then 4 and so on)
 
 If you win, you quit immediatly and leave the table.
