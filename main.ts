@@ -189,18 +189,18 @@ function gameFunction():void {
                 if (amount < currentBet) break;
                 amountOfTries++;
                 amount -= currentBet;
-                currentBet *= 2;
                 const random = randomNumber(37);
                 let result = fields[random];
                 if (result.color === chosenColor) {
-                    amount += currentBet;
+                    amount += (currentBet * 2);
                     break;
                 } else {
                     console.log(`${amountOfTries}. Didn't hit ${chosenColor} (hit ${result.color} with the number ${result.number}) and lost ${currentBet} (total is now ${amount})`)
                 }
+                currentBet *= 2;
             }
             if (amount === (startingAmount + startingBet)) {
-                console.log(`You won at attempt nr. ${amountOfTries} and have a total of ${amount}, quit right now`)
+                console.log(`You won at attempt nr. ${amountOfTries} and have a total of ${amount}. You quit.`)
             } else if (amount < startingAmount) {
                 console.log("You lost and cant get your bettings backs.")
             }
